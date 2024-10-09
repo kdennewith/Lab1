@@ -118,9 +118,35 @@ class Node{
 	   a method to find the node in the tree
 	   with a specific value
 	   */
+	   /**
+	    * A method to find a key integer inside of a BinaryTree.
+	    * @param root The root node of a BinaryTree object.
+	    * @param key An integer to search for in the BinaryTree object.
+	    * @return rightTreeCheck Returns the final result, if not already found by the last Node.
+	    */
 	   public boolean find(Node root, int key){
-		 //implement in here
-		  
+		 
+		   if(root == null) {
+			   return false;
+		   }
+		   
+		   if(root.data = key) {
+			   return true;
+		   }
+		   
+		   boolean lSubTreeCheck = find(root.left, key);
+		   
+		   if(leftTreeCheck = true) {
+			   return true;
+		   }
+		   
+		   boolean rSubTreeCheck = find(root.right, key);
+		   
+		   if(rightTreeCheck = true) {
+			   return true;
+		   }
+		   
+		  return rightTreeCheck;
 	   }
 	   
 	   
