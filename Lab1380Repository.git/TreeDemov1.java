@@ -233,6 +233,11 @@
 		      return root;  
 		   }
 		   
+		   /**
+		    * This method adds BinaryTree values to an ArrayList in-order.
+		    * @param root The root node of a BinaryTree object.
+		    * @param inOrder An empty arraylist, needed to store in-order Binary Tree values.
+		    */
 		   public void inOrderArray(Node root, ArrayList<Integer> inOrder){
 			      
 			   if(root == null) {
