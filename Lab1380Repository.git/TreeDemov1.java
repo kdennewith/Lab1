@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Node{
 	   int value;
 	   Node left, right;
@@ -102,7 +104,7 @@ class Node{
 	    * @param root The root node of the input BinarySearchTree Object.
 	    */
 	   public void postOrderTraversal(Node root){
-         
+      
 		   if(root == null) {
 			   return;
 		   }
@@ -130,23 +132,23 @@ class Node{
 			   return false;
 		   }
 		   
-		   if(root.data = key) {
+		   if(root.value == key) {
 			   return true;
 		   }
 		   
 		   boolean lSubTreeCheck = find(root.left, key);
 		   
-		   if(leftTreeCheck = true) {
+		   if(lSubTreeCheck == true) {
 			   return true;
 		   }
 		   
 		   boolean rSubTreeCheck = find(root.right, key);
 		   
-		   if(rightTreeCheck = true) {
+		   if(rSubTreeCheck == true) {
 			   return true;
 		   }
 		   
-		  return rightTreeCheck;
+		  return rSubTreeCheck;
 	   }
 	   
 	   
@@ -156,7 +158,7 @@ class Node{
 	   with a smallest key
 	   */
 	   public int getMin(Node root){
-         
+      
 		   if(root == null) {
 			   return Integer.MIN_VALUE;
 		   }
@@ -176,7 +178,15 @@ class Node{
 	   with a largest key
 	   */
 	   public int getMax(Node root){
-         
+		   if(root == null) {
+			   return Integer.MIN_VALUE;
+		   }
+		   
+		   ArrayList<Integer> inOrder = new ArrayList<>();
+		   
+		   inOrderArray(root, inOrder);
+		   
+		   return inOrder.get(inOrder.size() - 1);
 	   }
 	   
 	   
@@ -213,15 +223,15 @@ class Node{
 	      return root;  
 	   }
 	   
-	   public void inOrderArray(Node root, ArrayList inOrder){
+	   public void inOrderArray(Node root, ArrayList<Integer> inOrder){
 		      
 		   if(root == null) {
 			   return;
 		   }
 		   
-		   inOrderArray(root.left);
-		   inOrder.add
-		   inOrderArray(root.right);
+		   inOrderArray(root.left, inOrder);
+		   inOrder.add(root.value);
+		   inOrderArray(root.right, inOrder);
 	   }
 	   
 	}
