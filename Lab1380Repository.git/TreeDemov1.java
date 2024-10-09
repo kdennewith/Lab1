@@ -157,6 +157,11 @@
 		   a method to find the node in the tree
 		   with a smallest key
 		   */
+		   /**
+		    * This method get's the minumum key value in the given Binary Tree.
+		    * @param root The root node of a BinaryTree object.
+		    * @return The first index of the inOrder arraylist which is the min.
+		    */
 		   public int getMin(Node root){
 	      
 			   if(root == null) {
@@ -177,6 +182,11 @@
 		   a method to find the node in the tree
 		   with a largest key
 		   */
+		   /**
+		    * This method get's the maximum key value in the given Binary Tree.
+		    * @param root The root node of a BinaryTree object.
+		    * @return The last index of the inOrder arraylist which is the max.
+		    */
 		   public int getMax(Node root){
 			   if(root == null) {
 				   return Integer.MIN_VALUE;
