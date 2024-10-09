@@ -67,12 +67,7 @@ class Node{
 			   return;
 		   }
 		   
-		   if(root.right == null) {
-			   System.out.println(root.value + ".");
-		   }else {
-			   System.out.println(root.value + ", ");
-		   }
-		   
+		   System.out.println(root.value + ", ");
 		   preOrderTraversal(root.left);
 		   preOrderTraversal(root.right);
 	   }
@@ -83,7 +78,14 @@ class Node{
 	   in-order traversal
 	   */
 	   public void inOrderTraversal(Node root){
-	      //implement in here
+	      
+		   if(root == null) {
+			   return;
+		   }
+		   
+		   inOrderTraversal(root.left);
+		   System.out.println(root.value + ", ");
+		   preOrderTraversal(root.right);
 	   }
 	   
 	   
