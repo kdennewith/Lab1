@@ -77,6 +77,10 @@ class Node{
 	   /*
 	   in-order traversal
 	   */
+	   /**
+	    * Prints the value of every node in-order.
+	    * @param root The root node of the input BinarySearchTree Object.
+	    */
 	   public void inOrderTraversal(Node root){
 	      
 		   if(root == null) {
@@ -93,10 +97,19 @@ class Node{
 	   /*
 	   post-order traversal
 	   */
-	  
+	   /**
+	    * Prints the value of every node in post-order.
+	    * @param root The root node of the input BinarySearchTree Object.
+	    */
 	   public void postOrderTraversal(Node root){
-         //implement in here
+         
+		   if(root == null) {
+			   return;
+		   }
 		   
+		   postOrderTraversal(root.left);
+		   postOrderTraversal(root.right);
+		   System.out.println(root.value + ", ");
 	   }
 	   
 	   
