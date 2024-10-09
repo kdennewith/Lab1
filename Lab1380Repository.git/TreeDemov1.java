@@ -89,7 +89,7 @@ class Node{
 		   
 		   inOrderTraversal(root.left);
 		   System.out.println(root.value + ", ");
-		   preOrderTraversal(root.right);
+		   inOrderTraversal(root.right);
 	   }
 	   
 	   
@@ -156,8 +156,17 @@ class Node{
 	   with a smallest key
 	   */
 	   public int getMin(Node root){
-         //implement in here
-	      
+         
+		   if(root == null) {
+			   return Integer.MIN_VALUE;
+		   }
+		   
+		   ArrayList<Integer> inOrder = new ArrayList<>();
+		   
+		   inOrderArray(root, inOrder);
+		   
+		   
+		   return inOrder.get(0);
 	   }
 	  
 	  
@@ -167,7 +176,7 @@ class Node{
 	   with a largest key
 	   */
 	   public int getMax(Node root){
-         //implement in here
+         
 	   }
 	   
 	   
@@ -204,7 +213,16 @@ class Node{
 	      return root;  
 	   }
 	   
-	   
+	   public void inOrderArray(Node root, ArrayList inOrder){
+		      
+		   if(root == null) {
+			   return;
+		   }
+		   
+		   inOrderArray(root.left);
+		   inOrder.add
+		   inOrderArray(root.right);
+	   }
 	   
 	}
 
